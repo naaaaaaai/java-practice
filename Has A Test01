@@ -1,0 +1,63 @@
+package Test3;
+
+/**
+ * 下の仕様に基づいて、各クラスを作成してください。
+(仕様)
+ゲームに登場するモンスターを表すMonsterクラスを作成します。
+次のフィールド、コンストラクタを作成し、Monster.javaとして保存します。
+
+フィールドを作成する
+名前を表すnameをString型で宣言する
+体力を表すhpをint型で宣言する
+コンストラクタを作成する
+引数：
+name:String型
+hp:int型
+処理内容：引数で与えられた値を、同名のメンバ変数に代入する。
+ゲームに登場する勇者を表すYushaクラスを作成します。
+次のフィールド、コンストラクタ、メソッドを作成し、Yusha.javaとして保存します。
+
+フィールドを作成する
+名前を表すnameをString型で宣言する
+攻撃力を表すatkをint型で宣言する
+コンストラクタを作成する
+引数：
+name:String型
+atk:int型
+処理内容：引数で与えられた値を、同名のメンバ変数に代入する。
+attackメソッドを作成する
+引数：
+攻撃対象を表すMonster型の引数 target
+処理内容：
+攻撃対象のhpを減らす。減らす量は勇者の攻撃力の値とする
+
+
+「xxxxにyyyのダメージ!」と表示する。xxxxは攻撃対象モンスターの名前。yyyはHPを減らした量
+public class Main {
+    public static void main(String[] args) {
+        Yusha taro = new Yusha("タロウ", 10);
+        Monster goblin = new Monster("ゴブリン", 20);
+
+        //変数taroの持つメソッドattackを呼び出す。
+        //引数はgoblinとする。
+
+    }
+}
+
+ *
+ *
+ *
+ * @author nai
+ *
+ */
+
+public class HasA01 {
+	public String name;
+	public int hp;
+
+	public HasA01(String name, int hp){
+		this.name=name;
+		this.hp=hp;
+
+	}
+}
