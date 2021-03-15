@@ -1,0 +1,15 @@
+package Test3;
+
+public class HasAMain {
+	    public static void main(String[] args) {
+	        HasA02 taro = new HasA02("タロウ", 10);
+	        HasA01 goblin = new HasA01("ゴブリン", 50);
+
+	        //変数taroの持つメソッドattackを呼び出す。
+	        //引数はgoblinとします。
+	        taro.attack(goblin);
+
+	    }
+
+}
+
