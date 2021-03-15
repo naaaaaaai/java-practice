@@ -1,0 +1,147 @@
+package Test3;
+import java.util.ArrayList;
+import java.util.List;
+
+//配列を作成し、用意した配列の無いようのものを含むかどうか調べるメソッド
+public class Contain01 {
+	public static void main(String[]args) {
+		List lst=new ArrayList() ;
+		lst.add("kokokoro");
+		lst.add("kokkoro");
+		lst.add("coccoro");
+
+		String[]mix= {"mikku","kokokoro","coccoro"};
+		for(String s:mix) {
+			if(lst.contains(s)) {
+				System.out.println("mixの要素を含む"+s);
+			}else {
+				System.out.println("mixの要素を含まない"+s);
+
+			}
+
+		}
+
+		System.out.println("for文の後のlst出力1："+lst);
+		System.out.println("for文の後のlst出力2："+mix);
+
+
+		;
+		List anotherList=new ArrayList();
+		lst.add("mikku");
+
+		System.out.println("for文の後のlst出力3："+lst);
+
+		anotherList.add("kokoro");
+		anotherList.add("miyako");
+
+		System.out.println("lst.containsAll(anotherlist)の前："+anotherList);
+		System.out.println("lst.containsAll(anotherlist)の前："+lst);
+
+
+		System.out.println(lst.containsAll(anotherList));
+
+		lst.add("miyako");
+		anotherList.add("kokokoro");
+
+		System.out.println("lst.containsAll(anotherlist)の前："+anotherList);
+		System.out.println("lst.containsAll(anotherlist)の前："+lst);
+
+		anotherList.remove(0);
+
+
+
+
+
+		System.out.println(lst.containsAll(anotherList));
+
+
+
+		}
+	}
+
+
+
+
+/*public static void main(String[]args) {
+		List lst=new ArrayList() ;
+		lst.add("kokokoro");
+		lst.add("kokkoro");
+		lst.add("coccoro");
+
+		String[]mix= {"mikku","kokokoro","coccoro"};
+		for(String s:mix) {
+			if(lst.contains(s)) {
+				System.out.println("mixの要素を含む"+s);
+			}else {
+				System.out.println("mixの要素を含まない"+s);
+
+			}
+
+		}
+
+		System.out.println("for文の後のlst出力1："+lst);
+		System.out.println("for文の後のlst出力2："+mix);
+
+
+		;
+		List anotherList=new ArrayList();
+		lst.add("mikku");
+
+		System.out.println("for文の後のlst出力3："+lst);
+
+		anotherList.add("kokoro");
+		anotherList.add("miyako");
+
+		System.out.println("lst.containsAll(anotherlist)の前："+anotherList);
+		System.out.println("lst.containsAll(anotherlist)の前："+lst);
+
+
+		System.out.println(lst.containsAll(anotherList));
+
+		lst.add("miyako");
+		anotherList.add("kokokoro");
+
+		System.out.println("lst.containsAll(anotherlist)の前："+anotherList);
+		System.out.println("lst.containsAll(anotherlist)の前："+lst);
+
+		anotherList.remove(0);
+
+
+
+
+
+		System.out.println(lst.containsAll(anotherList));
+
+
+
+		}
+	}
+	public static void main(String[]args) {
+		List lst=new ArrayList();
+		lst.add("こっころ");
+		lst.add("こころ");
+		lst.add("cocoro");
+
+		String[]mix= {"kokoro","こっころ","cocoro","みやこ"};
+		for(String s:mix) {
+			if(lst.contains(s)) {
+				System.out.println("mixに含む文字は："+s);
+
+			}else {
+				System.out.println("mixに含まない文字は"+s);
+
+			}
+
+		}
+		List anotherList=new ArrayList();
+		lst.add("こっころ");
+		lst.add("こ");
+		anotherList.add("プリン");
+		anotherList.add("こっころ");
+		System.out.println(lst.containsAll(anotherList));
+		System.out.println(anotherList);
+
+ *
+ *
+ *
+ */
