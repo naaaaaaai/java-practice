@@ -1,0 +1,60 @@
+package Test3;
+
+/**
+ *
+フィールドを作成する
+名前を表すnameをString型で宣言する
+攻撃力を表すatkをint型で宣言する
+コンストラクタを作成する
+引数：
+name:String型
+atk:int型
+処理内容：引数で与えられた値を、同名のメンバ変数に代入する。
+attackメソッドを作成する
+引数：
+攻撃対象を表すMonster型の引数 target
+処理内容：
+攻撃対象のhpを減らす。減らす量は勇者の攻撃力の値とする
+
+
+「xxxxにyyyのダメージ!」と表示する。xxxxは攻撃対象モンスターの名前。yyyはHPを減らした量
+public class Main {
+    public static void main(String[] args) {
+        Yusha taro = new Yusha("タロウ", 10);
+        Monster goblin = new Monster("ゴブリン", 20);
+
+        //変数taroの持つメソッドattackを呼び出す。
+        //引数はgoblinとする。
+
+    }
+}
+
+ */
+
+public class HasA02 {
+	 public String name;
+	 public int atk;
+
+	 public HasA02(String name,int atk) {
+		 this.name=name;
+		 this.atk=atk;
+	 }
+	 public void attack(HasA01 target) {
+		 for(int i=1;i<10;i++) {
+		 target.hp=target.hp-this.atk;
+		 }
+		 System.out.println(target.name+"に"+this.atk*10+"のダメージ");
+		 if(target.hp<0) {
+			 System.out.println("オーバーキルです。");
+		 }
+		 System.out.println("残りのHPは"+target.hp);
+
+	 }
+
+
+
+
+	 }
+
+
+
