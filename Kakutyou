@@ -1,0 +1,26 @@
+package Test3;
+
+public class Kakutyou {
+	public static void main(String[]args) {
+		String name="ito";
+		String mix[]= {"miku","kokoro"};
+		for(String s:mix) {
+			name+=s;
+			System.out.println(name);
+		}
+	}
+}
+
+
+
+/*	public static void main(String[]args) {
+	int total=0;
+	int number[]= {10,20,30,40,50};
+	for (int score : number) {
+		total+=score;
+	}
+	System.out.println("合計"+total);
+ *
+ */
+
+
