@@ -1,0 +1,119 @@
+package Test3;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+/*
+ * miku
+mikku  →list
+--------
+kokoro
+kokkoro→set
+ * を出力するメソッド
+ * 使用するものはiterator
+ */
+
+public class Itr01 {
+	public static void main(String[]args) {
+		 // リストを作成する
+		List<String>list=new ArrayList();
+		list.add("miku");
+		list.add("mikku");
+
+		// イテレータを取得し、メソッドを呼び出す
+		printIterator(list.iterator());
+
+		System.out.println("---------");
+
+		 // セットを作成する
+		Set<String>set=new HashSet<>();
+		set.add("kokoro");
+		set.add("kokkoro");
+
+		// イテレータを取得し、メソッドを呼び出す
+		printIterator(set.iterator());
+
+
+
+	}
+	//上記iteratorメソッドについての詳細を記載
+	private static void printIterator(Iterator<String> iterator) {
+		while (iterator.hasNext()) {
+			String s=iterator.next();
+			System.out.println(s);
+
+
+
+
+		}
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ArrayList list = new ArrayList();
+Iterator iterator = list.iterator();
+
+ *
+ *
+ *
+ *import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+public class IteratorDemo {
+
+  public static void main(String[] args) {
+    // リストを作成する
+    List<String> list = new ArrayList<>();
+    list.add("alpha");
+    list.add("bravo");
+    list.add("charlie");
+
+    // イテレータを取得し、メソッドを呼び出す
+    printIterable(list.iterator());
+
+    System.out.println("-----");
+
+    // セットを作成する
+    Set<String> set = new HashSet<>();
+    set.add("delta");
+    set.add("echo");
+    set.add("foxtrot");
+
+    // イテレータを取得し、メソッドを呼び出す
+    printIterable(set.iterator());
+  }
+
+  private static void printIterable(Iterator<String> iterator) {
+    while (iterator.hasNext()) {
+      String s = iterator.next();
+      System.out.println(s);
+    }
+  }
+}
+ *
+ *
+ *
+ */
