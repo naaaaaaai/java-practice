@@ -1,0 +1,56 @@
+package Test3;
+import java.util.ArrayList;
+public class Size01 {
+	public static void main(String[]args) {
+		ArrayList<String>list=new ArrayList();
+		list.add("mikku");
+		list.add("kokoro");
+		list.add("kokkoro");
+
+		System.out.println(list.size());
+	//上記の場合コンソール結果：「3」
+
+
+	    for(int i=0;i<list.size();i++) {
+	    	String s=list.get(i);
+	    	System.out.println(s);
+	    }
+	//list内の要素数の数になるまで、list内の要素を出力する。
+
+	}
+}
+
+//コンソール
+3
+mikku
+kokoro
+kokkoro
+
+
+
+
+
+/*
+ * import java.util.ArrayList;
+
+class collectionTest2{
+  public static void main(String args[]){
+    ArrayList<String> array = new ArrayList<String>();
+
+    array.add("日本");
+    array.add("ブラジル");
+    array.add("イングランド");
+    array.add("ポルトガル");
+    array.add("フランス");
+
+    System.out.println("登録データ数:" + array.size());
+
+    for (int i = 0 ; i < array.size() ; i++){
+      String country = array.get(i);
+      System.out.println(country);
+    }
+  }
+}
+ *
+ */
+
