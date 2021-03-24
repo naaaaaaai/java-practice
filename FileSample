@@ -1,0 +1,31 @@
+package Test3;
+
+import java.io.File;
+/*java.ioパッケージはシステム入出力に使うクラス、
+ * インターフェース等が提供されているパッケージです。
+ *  ioパッケージを利用して、ファイルからのデータ読み込みや、
+ *  ファイルへの書き出し等の入出力処理を実装することができます。
+
+ */
+public class FileSample {
+
+	public static void main(String[]args) {
+
+		//確認したいファイルパスを渡してFileオブジェクトを作成
+	    File newfile=new File("sample");
+
+	    //existsメソッドの実行
+	    if(newfile.exists()) {
+	    	//ファイルもしくはディレクトリがある場合
+	    	System.out.println("指定されたファイルもしくはディレクトリが存在する");
+
+	    }else {
+	    	System.out.println("指定されたファイルもしくはオブジェクトが存在しない");
+
+	    }
+
+	}
+
+
+
+}
