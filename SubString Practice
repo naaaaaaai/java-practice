@@ -1,0 +1,18 @@
+package Test3;
+/*
+ * 課題6にて出来たSubStringに関して掘り下げをします。
+ *"文字列".subString(抜き出し開始,抜き出し終了)
+ */
+
+public class SubString {
+	public static void main(String[]args) {
+		String str="ItoMik";
+		String mik=str.substring(3,6);
+
+		//mikという文字を抽出したい
+
+		System.out.println(mik);
+
+	}
+
+}
