@@ -1,0 +1,35 @@
+package Test3;
+/*
+ * 課題6にて出来たSubStringに関して掘り下げをします。
+ *"文字列".subString(抜き出し開始,抜き出し終了)
+ */
+
+public class SubString {
+	public static void main(String[]args) {
+		String str="ItoMik";
+		String mik=str.substring(3,6);
+
+		//mikという文字を抽出したい
+
+		System.out.println(mik);
+
+
+	   String mikku="miiiiiik";
+	   String ito=mikku.substring(0,5);
+	   System.out.println(ito);
+
+	   //開始位置を指定する→以降の文字を抽出する
+
+	   String miik=mikku.substring(0);
+	   //0の場合、0以降の文字を抽出
+	   System.out.println(miik);
+	   
+}
+}
+/*
+ *コンソール 
+Mik
+miiii
+miiiiiik
+ * 
+ */
