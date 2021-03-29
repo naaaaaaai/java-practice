@@ -1,0 +1,91 @@
+package Test3;
+
+//課題5にて出題された内容にて登場したwriteについて深掘りをする
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class FileWrite01 {
+
+	/**手順はファイルから読み込むときと似ています。テキストを書き込みたいファイルを対象にして
+	 * Fileクラスのオブジェクトを作成します。
+	 * そしてそのオブジェクトを引数としてFileWriterクラスのオブジェクトを作成します。
+File file = new File(file_name);
+FileWriter filewriter = new FileWriter(file);
+これで対象のファイルに対する書き込みを行う準備が出来ました。
+ちなみにFileWriterクラスのオブジェクトを作成する場合には、"IOException"という例外が発生する可能性があるため
+、例外の処理をしておいてください。
+	 */
+
+
+
+
+	/*
+	 * 書込み
+	 * "write"メソッドを使います。
+	 * "write"メソッドは書き込む値として文字コードを使ったり、
+	 * 文字列を指定したりといくつか用意されているのですが、
+	 * ここでは文字列を書き込むメソッドを見てみます。
+	 */
+
+	/*try{
+	 * File file =new FIle("c:\\tmp\\test.txt");
+	 * FIleWiter filewriter=new FileWiter(file);
+	 *
+	 * filewiter.write("Hello");
+	 *
+	 * }catch(IOException ioe){
+	 * System.out.println(e);
+	 *  *
+	 */
+
+	/**ファイルに書込みが出来たらファイルを閉じます。
+	 * closeメソッドを利用
+	 * public void close() throws IOException.
+	 */
+
+	/*try{
+	 * File file=new File("c:\\tmp\\test.txt");
+	 * FileWiter filewiter(=new FIleWiter (file);
+	 *
+	 * filewiter.write("hello");
+	 *
+	 * filewiter.close();
+	 * }catch(IOException e){
+	 * System.out.println(e)
+	 *
+	 */
+
+	public static void main(String[]args) {
+		try {
+			File file=new File("c:\\tmp\\test.txt");
+
+			if(checkBeforeWritefile(file)) {
+				FileWriter filewriter =new FileWriter(file);
+
+				filewriter.write("こんにちは\r\n");
+				filewriter.write("お元気ですか\r\n");
+
+				filewriter.close();
+
+			}else {
+				System.out.println("ファイルに書き込めません");
+			}catch(IOException ioe) {
+				System.out.println(ioe);
+			}
+
+		}
+
+		private static boolean checkBeforeWritefile(File file) {
+			if(file.exists()) {
+				if(file.isFile() && file.canWrite()) {
+					return true;
+				}
+			}return false;
+		}
+	}
+
+
+
+}
