@@ -1,0 +1,32 @@
+package Test3;
+//課題6にて使用されたStringBuilderについて
+/*
+ * StringBuilder クラスの append メソッドを使用すると
+ * オブジェクトに対して文字列や他のデータ型の値を追加することができます。
+ */
+
+public class StringBuilde01 {
+
+	public static void main(String[]args) {
+		StringBuilder sb=new StringBuilder();
+		sb.append("ito");
+		sb.append("miku");
+		sb.append("my life");
+		System.out.println(sb);
+
+
+	}
+
+}
+
+	/*
+	 * public static void main(String[]args) {
+	StringBuilder sb= new StringBuilder();
+	sb.append("ABCDE");
+    sb.append("FG");
+    sb.append("HIJKLNN");
+    sb.append("OPQR");
+    System.out.println(sb.toString());
+}
+}
+	 */
